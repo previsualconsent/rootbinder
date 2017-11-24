@@ -46,7 +46,7 @@ RUN rm fastjet.tar.gz
 USER main
 
 # Set ROOT environment
-ENV ROOTSYS         "/opt/root"
+ENV ROOTSYS         "/opt/root-6.08.06"
 ENV PATH            "$ROOTSYS/bin:$ROOTSYS/bin/bin:$PATH"
 ENV LD_LIBRARY_PATH "$ROOTSYS/lib:$LD_LIBRARY_PATH"
 ENV PYTHONPATH      "$ROOTSYS/lib:PYTHONPATH"
