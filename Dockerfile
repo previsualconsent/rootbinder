@@ -8,10 +8,10 @@ USER root
 # Install ROOT prerequisites
 RUN apt-get update
 RUN apt-get install -y \
-    libx11-6 \
-    libxext6 \
-    libxft2 \
-    libxpm4  \
+   # libx11-6 \
+  #  libxext6 \
+  #  libxft2 \
+  #  libxpm4  \
     git \
     dpkg-dev \
     cmake \
@@ -33,9 +33,10 @@ RUN R -e "install.packages(c('Rcpp','RInside'), repos = \"http://cran.case.edu\"
 
 # Download and install ROOT master
 WORKDIR /opt
-RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
-RUN tar xzf root.tar.gz
-RUN rm root.tar.gz
+RUN wget http:https://root.cern.ch/download/root_v6.08.06.source.tar.gz
+#//root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
+RUN tar xzf root_v6.08.06.source.tar.gz
+RUN rm root_v6.08.06.source.tar.gz
 
 # Download and install Fastjet
 RUN wget http://root.cern.ch/notebooks/rootbinderdata/fastjet.tar.gz 
