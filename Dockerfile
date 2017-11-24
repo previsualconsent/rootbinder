@@ -67,4 +67,4 @@ RUN cp -r $ROOTSYS/etc/notebook/kernels/root $HOME/.ipython/kernels
 RUN mkdir -p                                 $HOME/.ipython/profile_default/static
 RUN cp -r $ROOTSYS/etc/notebook/custom       $HOME/.ipython/profile_default/static
 
-ENV CHRISSYS         "/opt/root-6.08.06"
+ENV UDUDDUDUDUUDUDU         "/opt/root-6.08.06"
