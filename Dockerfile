@@ -1,6 +1,8 @@
 
 #FROM andrewosh/binder-base
 
+FROM ubuntu:latest
+
 #MAINTAINER Enric Tejedor Saavedra <enric.tejedor.saavedra@cern.ch>
 
 USER root
