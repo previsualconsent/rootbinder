@@ -55,7 +55,7 @@ ENV PYTHONPATH      "$ROOTSYS/lib:PYTHONPATH"
 ENV LD_LIBRARY_PATH "/opt/fastjet/lib:$LD_LIBRARY_PATH"
 ENV ROOT_INCLUDE_PATH "/opt/fastjet/include"
 
-# Customise the ROOTbook
+# Customise the ROOTbook #issues here
 RUN pip install --upgrade pip
 RUN pip install metakernel
 RUN mkdir -p                                 $HOME/.ipython/kernels
