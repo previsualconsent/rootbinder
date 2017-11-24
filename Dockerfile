@@ -6,6 +6,13 @@ FROM ubuntu:latest
 #MAINTAINER Enric Tejedor Saavedra <enric.tejedor.saavedra@cern.ch>
 
 USER root
+RUN \
+  apt-get update && \
+  apt-get -y upgrade && \
+  apt-get install -y build-essential && \
+  apt-get install -y software-properties-common && \
+  apt-get install -y byobu curl git htop man unzip vim wget
+
 
 # Install ROOT prerequisites
 RUN apt-get update
