@@ -58,7 +58,13 @@ ENV ROOT_INCLUDE_PATH "/opt/fastjet/include"
 # Customise the ROOTbook #issues here
 RUN pip install --upgrade pip
 RUN pip install metakernel
+
+ENV ChirSYS         "/opt/root-6.08.06"
+
+
 RUN mkdir -p                                 $HOME/.ipython/kernels
 RUN cp -r $ROOTSYS/etc/notebook/kernels/root $HOME/.ipython/kernels
 RUN mkdir -p                                 $HOME/.ipython/profile_default/static
 RUN cp -r $ROOTSYS/etc/notebook/custom       $HOME/.ipython/profile_default/static
+
+ENV CHRISSYS         "/opt/root-6.08.06"
