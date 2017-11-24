@@ -33,7 +33,7 @@ RUN R -e "install.packages(c('Rcpp','RInside'), repos = \"http://cran.case.edu\"
 
 # Download and install ROOT master
 WORKDIR /opt
-RUN wget http:https://root.cern.ch/download/root_v6.08.06.source.tar.gz
+RUN wget https://root.cern.ch/download/root_v6.08.06.source.tar.gz
 #//root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
 RUN tar xzf root_v6.08.06.source.tar.gz
 RUN rm root_v6.08.06.source.tar.gz
