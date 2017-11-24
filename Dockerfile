@@ -52,7 +52,7 @@ RUN wget http://root.cern.ch/notebooks/rootbinderdata/fastjet.tar.gz
 RUN tar xzf fastjet.tar.gz
 RUN rm fastjet.tar.gz
 
-USER main
+#USER main
 
 # Set ROOT environment
 ENV ROOTSYS         "/opt/root-6.08.06"
