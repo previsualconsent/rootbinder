@@ -1,5 +1,5 @@
 
-FROM andrewosh/binder-base
+FROM andrewosh/binder-python-2.7
 
 #MAINTAINER Enric Tejedor Saavedra <enric.tejedor.saavedra@cern.ch>
 
@@ -20,7 +20,7 @@ RUN apt-get install -y \
     r-base-dev
 
 # Install R packages
-RUN R -e "install.packages(c('Rcpp','RInside'), repos = \"http://cran.case.edu\")"
+#RUN R -e "install.packages(c('Rcpp','RInside'), repos = \"http://cran.case.edu\")"
 
 # Download and install ROOT master
 WORKDIR /opt
