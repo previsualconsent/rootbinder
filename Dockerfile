@@ -32,6 +32,13 @@ RUN apt-get install -y \
     libxft-dev \
     libxext-dev
     
+    
+#Install Pip
+RUN apt-get install python2.7
+RUN apt-get install python-pip
+    
+    
+    
 # Install ROOT additional libraries
 RUN apt-get install -y \
     r-base \
@@ -52,8 +59,8 @@ RUN rm root_v6.08.06.source.tar.gz
 #RUN tar xzf fastjet.tar.gz
 #RUN rm fastjet.tar.gz
 
-RUN apt-get install python2.7
-RUN apt-get install python-pip
+#RUN apt-get install python2.7
+#RUN apt-get install python-pip
 
 
 #USER main
