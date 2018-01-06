@@ -15,7 +15,7 @@ RUN apt-get install -y \
     libxpm4
     
 # Install ROOT additional libraries
-RUN gapt-get install -y \
+RUN apt-get install -y \
     r-base \
     r-base-dev
 
