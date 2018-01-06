@@ -52,6 +52,10 @@ RUN rm root_v6.08.06.source.tar.gz
 #RUN tar xzf fastjet.tar.gz
 #RUN rm fastjet.tar.gz
 
+RUN apt-get install python2.7
+RUN apt-get install pip-python
+
+
 #USER main
 
 # Set ROOT environment
