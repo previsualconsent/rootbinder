@@ -53,7 +53,7 @@ RUN rm root_v6.08.06.source.tar.gz
 #RUN rm fastjet.tar.gz
 
 RUN apt-get install python2.7
-RUN apt-get install pip-python
+RUN apt-get install python-pip
 
 
 #USER main
