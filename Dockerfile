@@ -34,8 +34,8 @@ RUN apt-get install -y \
     
     
 #Install Pip
-RUN apt-get install python2.7
-RUN apt-get install python-pip
+RUN apt-get install -y python2.7
+RUN apt-get install -y python-pip
     
     
     
