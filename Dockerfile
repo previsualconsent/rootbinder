@@ -4,8 +4,8 @@ FROM andrewosh/binder-base
 #MAINTAINER Enric Tejedor Saavedra <enric.tejedor.saavedra@cern.ch>
 USER root
 
-RUN conda update conda
-RUN conda install python=2.7.13
+#RUN conda update conda
+#RUN conda install python=2.7.13
 
 # Install ROOT prerequisites
 RUN apt-get update
@@ -49,13 +49,14 @@ ENV PYTHONPATH      "$ROOTSYS/lib:PYTHONPATH"
 # Customise the ROOTbook
 RUN pip install --upgrade pip
 RUN pip install metakernel
+RUN pip install .
 RUN mkdir -p                                 $HOME/.ipython/kernels
 RUN cp -r $ROOTSYS/etc/notebook/kernels/root $HOME/.ipython/kernels
 RUN mkdir -p                                 $HOME/.ipython/profile_default/static
 RUN cp -r $ROOTSYS/etc/notebook/custom $HOME/.ipython/profile_default/static
 
 
-RUN root -v
+#RUN root -v
 RUN conda search python
 RUN conda env list
 RUN conda list
