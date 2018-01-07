@@ -54,6 +54,8 @@ RUN cp -r $ROOTSYS/etc/notebook/kernels/root $HOME/.ipython/kernels
 RUN mkdir -p                                 $HOME/.ipython/profile_default/static
 RUN cp -r $ROOTSYS/etc/notebook/custom $HOME/.ipython/profile_default/static
 
+
+RUN root -v
 RUN conda search python
 RUN conda env list
 RUN conda list
