@@ -1,5 +1,5 @@
 
-FROM andrewosh/binder-python-2.7
+FROM andrewosh/binder-base
 
 #MAINTAINER Enric Tejedor Saavedra <enric.tejedor.saavedra@cern.ch>
 
