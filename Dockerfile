@@ -56,3 +56,4 @@ RUN conda env list
 RUN conda list
 RUN python --version
 #RUN conda env remove --name python3
+RUN conda info
