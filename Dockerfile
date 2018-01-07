@@ -4,6 +4,9 @@ FROM andrewosh/binder-base
 #MAINTAINER Enric Tejedor Saavedra <enric.tejedor.saavedra@cern.ch>
 USER root
 
+RUN conda update conda
+RUN conda install python=2.7.13
+
 # Install ROOT prerequisites
 RUN apt-get update
 RUN apt-get install -y \
@@ -52,8 +55,6 @@ RUN mkdir -p                                 $HOME/.ipython/profile_default/stat
 RUN cp -r $ROOTSYS/etc/notebook/custom $HOME/.ipython/profile_default/static
 
 RUN conda search python
-RUN conda update conda
-RUN conda install python=2.7.13
 RUN conda env list
 RUN conda list
 RUN python --version
