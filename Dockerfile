@@ -40,8 +40,8 @@ ENV LD_LIBRARY_PATH "$ROOTSYS/lib:$LD_LIBRARY_PATH"
 ENV PYTHONPATH      "$ROOTSYS/lib:PYTHONPATH"
 
 # Set ROOT environment for Fastjet
-ENV LD_LIBRARY_PATH "/opt/fastjet/lib:$LD_LIBRARY_PATH"
-ENV ROOT_INCLUDE_PATH "/opt/fastjet/include"
+#ENV LD_LIBRARY_PATH "/opt/fastjet/lib:$LD_LIBRARY_PATH"
+#ENV ROOT_INCLUDE_PATH "/opt/fastjet/include"
 
 # Customise the ROOTbook
 #RUN pip install --upgrade pip
@@ -55,3 +55,4 @@ RUN conda search python
 RUN conda env list
 RUN conda list
 RUN python --version
+RUN conda env remove --name python3
