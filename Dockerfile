@@ -13,9 +13,9 @@ RUN apt-get install -y \
     libxpm4
     
 # Install ROOT additional libraries
-#RUN apt-get install -y \
-#    r-base \
-#    r-base-dev
+RUN apt-get install -y \
+    r-base \
+    r-base-dev
 
 # Install R packages
 #RUN R -e "install.packages(c('Rcpp','RInside'), repos = \"http://cran.case.edu\")"
@@ -31,7 +31,7 @@ RUN rm root.tar.gz
 #RUN tar xzf fastjet.tar.gz
 #RUN rm fastjet.tar.gz
 
-#USER main
+USER main
 
 # Set ROOT environment
 ENV ROOTSYS         "/opt/root"
@@ -44,7 +44,7 @@ ENV PYTHONPATH      "$ROOTSYS/lib:PYTHONPATH"
 #ENV ROOT_INCLUDE_PATH "/opt/fastjet/include"
 
 # Customise the ROOTbook
-#RUN pip install --upgrade pip
+RUN pip install --upgrade pip
 RUN pip install metakernel
 RUN mkdir -p                                 $HOME/.ipython/kernels
 RUN cp -r $ROOTSYS/etc/notebook/kernels/root $HOME/.ipython/kernels
