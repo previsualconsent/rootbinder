@@ -2,8 +2,6 @@
 FROM andrewosh/binder-base
 
 #MAINTAINER Enric Tejedor Saavedra <enric.tejedor.saavedra@cern.ch>
-
-
 USER root
 
 # Install ROOT prerequisites
@@ -15,9 +13,9 @@ RUN apt-get install -y \
     libxpm4
     
 # Install ROOT additional libraries
-RUN apt-get install -y \
-    r-base \
-    r-base-dev
+#RUN apt-get install -y \
+#    r-base \
+#    r-base-dev
 
 # Install R packages
 #RUN R -e "install.packages(c('Rcpp','RInside'), repos = \"http://cran.case.edu\")"
@@ -29,9 +27,9 @@ RUN tar xzf root.tar.gz
 RUN rm root.tar.gz
 
 # Download and install Fastjet
-RUN wget http://root.cern.ch/notebooks/rootbinderdata/fastjet.tar.gz 
-RUN tar xzf fastjet.tar.gz
-RUN rm fastjet.tar.gz
+#RUN wget http://root.cern.ch/notebooks/rootbinderdata/fastjet.tar.gz 
+#RUN tar xzf fastjet.tar.gz
+#RUN rm fastjet.tar.gz
 
 USER main
 
