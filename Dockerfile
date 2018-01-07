@@ -53,3 +53,4 @@ RUN cp -r $ROOTSYS/etc/notebook/custom $HOME/.ipython/profile_default/static
 
 RUN conda search python
 RUN conda env list
+RUN conda list
