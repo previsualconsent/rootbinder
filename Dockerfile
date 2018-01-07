@@ -31,7 +31,7 @@ RUN rm root.tar.gz
 #RUN tar xzf fastjet.tar.gz
 #RUN rm fastjet.tar.gz
 
-USER main
+#USER main
 
 # Set ROOT environment
 ENV ROOTSYS         "/opt/root"
