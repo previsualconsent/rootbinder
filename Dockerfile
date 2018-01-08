@@ -58,6 +58,7 @@ RUN cp -r $ROOTSYS/etc/notebook/custom $HOME/.ipython/profile_default/static
 RUN ls /usr/bin/p*
 RUN ls $HOME/.ipython/kernels/root/
 RUN more $HOME/.ipython/kernels/root/kernel.json
+RUN sed -i 's:python:/usr/bin/python2:g'  $HOME/.ipython/kernels/root/kernel.json
 RUN ls $HOME/.ipython/profile_default/static/custom/
 RUN more $HOME/.ipython/profile_default/static/custom/custom.js
 RUN conda search python
