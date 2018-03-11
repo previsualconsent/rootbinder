@@ -39,7 +39,8 @@ RUN git clone https://github.com/root-project/root.git
 RUN git checkout -b v6-08-04 v6-08-04
 RUN mkdir build
 RUN cd build
-Run cmake ../root
+RUN cmake ../root
+RUN make -j2
 #RUN tar xzf root.tar.gz
 #RUN rm root.tar.gz
 
