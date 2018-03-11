@@ -1,5 +1,7 @@
 
-FROM andrewosh/binder-base
+#FROM andrewosh/binder-base
+FROM aphecetche/root6
+
 
 #MAINTAINER Enric Tejedor Saavedra <enric.tejedor.saavedra@cern.ch>
 USER root
