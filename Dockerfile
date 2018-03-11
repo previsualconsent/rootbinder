@@ -27,21 +27,21 @@ RUN apt-get install -y \
 # Install ROOT additional libraries
 RUN apt-get install -y \
     r-base \
-    r-base-dev
-
-# Install R packages
-#RUN R -e "install.packages(c('Rcpp','RInside'), repos = \"http://cran.case.edu\")"
+    r-base-dev \
+    git-all
+    
 
 # Download and install ROOT master
 WORKDIR /opt
-RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
-RUN tar xzf root.tar.gz
-RUN rm root.tar.gz
-
-# Download and install Fastjet
-#RUN wget http://root.cern.ch/notebooks/rootbinderdata/fastjet.tar.gz 
-#RUN tar xzf fastjet.tar.gz
-#RUN rm fastjet.tar.gz
+#RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
+#RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
+RUN git clone https://github.com/root-project/root.git
+RUN git checkout -b v6-08-04 v6-08-04
+RUN mkdir build
+RUN cd build
+Run cmake ../root
+#RUN tar xzf root.tar.gz
+#RUN rm root.tar.gz
 
 USER main
 
@@ -62,17 +62,3 @@ RUN mkdir -p                                 $HOME/.ipython/kernels
 RUN cp -r $ROOTSYS/etc/notebook/kernels/root $HOME/.ipython/kernels
 RUN mkdir -p                                 $HOME/.ipython/profile_default/static
 RUN cp -r $ROOTSYS/etc/notebook/custom $HOME/.ipython/profile_default/static
-
-
-RUN ls /usr/bin/p*
-RUN ls $HOME/.ipython/kernels/root/
-#RUN more $HOME/.ipython/kernels/root/kernel.json
-#RUN sed -i 's:python:/usr/bin/python2:g'  $HOME/.ipython/kernels/root/kernel.json
-#RUN ls $HOME/.ipython/profile_default/static/custom/
-#RUN more $HOME/.ipython/profile_default/static/custom/custom.js
-#RUN conda search python
-RUN conda env list
-RUN conda list
-RUN python --version
-#RUN conda env remove --name python3
-RUN conda info
