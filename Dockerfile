@@ -34,9 +34,9 @@ RUN apt-get install -y \
 
 # Download and install ROOT master
 WORKDIR /opt
-#RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
-#RUN tar xzf root.tar.gz
-#RUN rm root.tar.gz
+RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
+RUN tar xzf root.tar.gz
+RUN rm root.tar.gz
 
 # Download and install Fastjet
 #RUN wget http://root.cern.ch/notebooks/rootbinderdata/fastjet.tar.gz 
