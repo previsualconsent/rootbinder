@@ -8,8 +8,10 @@ USER root
 RUN conda env list
 RUN conda list
 RUN conda info
-Run conda install ROOT={6.04.08}
+Run conda list
+#Run conda install ROOT={6.04.08}
 RUN conda create --name=testenv root=6 python=3
+Run conda list
 #RUN conda update conda
 #RUN conda install python=2.7.13
 
