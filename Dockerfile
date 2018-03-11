@@ -27,9 +27,9 @@ RUN apt-get install -y \
 
 # Download and install ROOT master
 WORKDIR /opt
-RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
-RUN tar xzf root.tar.gz
-RUN rm root.tar.gz
+#RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
+#RUN tar xzf root.tar.gz
+#RUN rm root.tar.gz
 
 # Download and install Fastjet
 #RUN wget http://root.cern.ch/notebooks/rootbinderdata/fastjet.tar.gz 
@@ -59,11 +59,11 @@ RUN cp -r $ROOTSYS/etc/notebook/custom $HOME/.ipython/profile_default/static
 
 RUN ls /usr/bin/p*
 RUN ls $HOME/.ipython/kernels/root/
-RUN more $HOME/.ipython/kernels/root/kernel.json
-RUN sed -i 's:python:/usr/bin/python2:g'  $HOME/.ipython/kernels/root/kernel.json
-RUN ls $HOME/.ipython/profile_default/static/custom/
-RUN more $HOME/.ipython/profile_default/static/custom/custom.js
-RUN conda search python
+#RUN more $HOME/.ipython/kernels/root/kernel.json
+#RUN sed -i 's:python:/usr/bin/python2:g'  $HOME/.ipython/kernels/root/kernel.json
+#RUN ls $HOME/.ipython/profile_default/static/custom/
+#RUN more $HOME/.ipython/profile_default/static/custom/custom.js
+#RUN conda search python
 RUN conda env list
 RUN conda list
 RUN python --version
