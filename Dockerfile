@@ -1,7 +1,7 @@
 
 #FROM andrewosh/binder-base
-FROM aphecetche/root6
-
+#FROM aphecetche/root6
+FROM andrewosh/binder-python-2.7
 
 #MAINTAINER Enric Tejedor Saavedra <enric.tejedor.saavedra@cern.ch>
 USER root
