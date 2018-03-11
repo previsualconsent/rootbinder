@@ -37,7 +37,7 @@ WORKDIR /opt
 #RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
 RUN git clone https://github.com/root-project/root.git
 RUN cd root
-RUN git checkout -b v6-08-04 v6-08-04
+RUN git checkout -b v6-08-04 
 RUN mkdir build
 RUN cd build
 RUN cmake ../root
