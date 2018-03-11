@@ -31,7 +31,7 @@ RUN apt-get install -y \
     git-all
     
 
-# Download and install ROOT master
+# Download and install ROOT master Need a version greater than 6.04 for the root notebooks
 WORKDIR /opt
 #RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
 #RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
