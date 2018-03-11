@@ -5,6 +5,9 @@ FROM andrewosh/binder-python-2.7
 
 #MAINTAINER Enric Tejedor Saavedra <enric.tejedor.saavedra@cern.ch>
 USER root
+RUN conda env list
+RUN conda list
+RUN conda info
 RUN conda create --name=testenv root=6 python=3
 #RUN conda update conda
 #RUN conda install python=2.7.13
