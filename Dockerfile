@@ -10,7 +10,7 @@ RUN conda list
 RUN conda info
 Run conda list
 #Run conda install ROOT={6.04.08}
-Run conda install jupyterlab
+Run conda install -c anaconda jupyterlab
 #RUN conda create --name=testenv root=6 python=3
 Run conda list
 #RUN conda update conda
