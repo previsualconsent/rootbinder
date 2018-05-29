@@ -2,6 +2,7 @@
 #FROM andrewosh/binder-base
 #FROM aphecetche/root6
 FROM andrewosh/binder-python-2.7
+ARG version="6.12.06"
 
 #MAINTAINER Enric Tejedor Saavedra <enric.tejedor.saavedra@cern.ch>
 USER root
@@ -30,7 +31,7 @@ RUN apt-get install -y \
     r-base-dev \
     git-all
     
-ADD https://root.cern.ch/download/root_v${version}.Linux-centos7-x86_64-gcc4.8.tar.gz /var/tmp/root.tar.gz
+ADD https://root.cern.ch/download/root_v${version}.Linux-ubuntu16-x86_64-gcc5.4.tar.gz /var/tmp/root.tar.gz
 RUN tar xzf /var/tmp/root.tar.gz -C /opt && rm /var/tmp/root.tar.gz
 
 USER main
