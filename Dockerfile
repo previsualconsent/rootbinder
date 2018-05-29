@@ -35,15 +35,16 @@ RUN apt-get install -y \
 WORKDIR /opt
 #RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
 #RUN wget http://root.cern.ch/notebooks/rootbinderdata/root.tar.gz 
-RUN git clone https://github.com/root-project/root.git
-RUN cd root
-RUN git checkout -b v6-08-04 
+RUN wget https://github.com/root-project/root/archive/v6-08-04.zip
+RUN unzip v6-08-04.zip
+RUN cd root-6-08-04/
 RUN mkdir build
 RUN cd build
 RUN cmake ../root
 RUN make -j2
 #RUN tar xzf root.tar.gz
 #RUN rm root.tar.gz
+RUN rm v6-08-04.zip
 
 USER main
 
